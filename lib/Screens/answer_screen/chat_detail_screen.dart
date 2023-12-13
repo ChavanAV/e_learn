@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_learn/ChatGptModel/home_page.dart';
 import 'package:e_learn/Screens/answer_screen/send_answer_screen.dart';
 import 'package:e_learn/method_provider/methods.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -62,6 +63,18 @@ class ChatDetailScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text('Request', style: requestResourceTextStyle),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 160),
+                        child: IconButton(
+                            icon: const Icon(Icons.assistant),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const AiPage(),
+                                  ));
+                            }),
+                      ),
                       Text(
                         DateFormat.yMMMd().format(dateTime.toDate()),
                       ),

@@ -22,7 +22,7 @@ class ResponseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 15),
+      margin: const EdgeInsets.only(bottom: 15, left: 5, right: 5),
       decoration: BoxDecoration(
         color: Theme.of(context).appBarTheme.surfaceTintColor,
         borderRadius: BorderRadius.circular(10),
